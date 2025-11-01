@@ -1,0 +1,31 @@
+package br.edu.atitus.luiza_neckel.zoo_digital.animais;
+
+import br.edu.atitus.luiza_neckel.zoo_digital.comportamentos.Nadador;
+import br.edu.atitus.luiza_neckel.zoo_digital.comportamentos.Predador;
+
+public class CavaloMarinho extends Peixe implements Nadador, Predador{
+
+    public CavaloMarinho(String nome, int idade) {
+        super(nome, idade, "Salgada");
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println(getNome() + " está borbulhando.");
+    }
+
+    @Override
+    public void comer() {
+        System.out.println(getNome() + " está comendo plânctons.");
+    }
+
+    @Override
+    public void nadar() {
+        System.out.println(getNome() + " está nadando com seus filhotes.");
+    }
+    
+	@Override
+	public void cacar() {
+		System.out.println(getNome() + " está camuflado caçando um crustáceo.");
+	}
+}
